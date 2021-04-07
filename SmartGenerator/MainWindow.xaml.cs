@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using SmartGenerator.Classes;
 using SmartGenerator.Source;
  
+
 namespace SmartGenerator
 {
     /// <summary>
