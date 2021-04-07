@@ -1,0 +1,20 @@
+﻿<Window x:Class="SmartGenerator.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        Title="Smart Generator - Help Window" Height="266.292" Width="542.472" Icon="..\Resources\Img\smart-codec-icon.png" WindowStartupLocation="CenterScreen" >
+    <Grid Margin="0,0,4,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="--[ Smart Generator ]--" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top" Height="42" Width="196" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="142" Width="510"><Run FontSize="17.3333333333333" FontFamily="Arial" Text=" "/><Run FontSize="17.3333333333333" FontFamily="Arial" Text="●"/><Run Text="Smart Generator est un outils  qui vous génère automatiquement vos fichier Word basée sur un modèle prédéfinis par l'utilisateur."/><LineBreak/><Run/><LineBreak/><Run Text="&#x9;"/><Run Text="&gt; "/><Run Text="Vous pouvez créer un modèle sur &quot;Ajouter Modèle&quot;"/><Run Text=" dans le Menu principale."/><LineBreak/><Run Text="&#x9;"/><Run Text="&gt; "/><Run Text="Vous pouvez générer un fichier "/><Run Text="en cliquant sur &quot;Nouveau Fichier&quot; sur le Menu."/><LineBreak/><Run/><LineBreak/><Run FontSize="17.3333333333333" FontFamily="Arial" Text=" "/><Run FontSize="17.3333333333333" FontFamily="Arial" Text="●"/><Run Text="Vous devez bien respecter l'ordre de vos champs comme ça vous aurez un fichier bien "/><Run Text="représenté"/><Run Text="."/></TextBlock>
+        <Button Content="Fermer" HorizontalAlignment="Left" Margin="446,204,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Contacter support" HorizontalAlignment="Left" Margin="12,204,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click_1"/>
+        <Button Content="Version" HorizontalAlignment="Left" Margin="233,204,0,0" VerticalAlignment="Top" Width="65" Click="Button_Click_2" Height="19"/>
+
+    </Grid>
+</Window>

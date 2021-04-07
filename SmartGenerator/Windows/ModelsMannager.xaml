@@ -1,0 +1,54 @@
+﻿<Window x:Class="SmartGenerator.Windows.ModelsMannager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        Title="Smart Generator" WindowStartupLocation="CenterScreen" Height="560" Width="880"
+        Icon="/SmartGenerator;component/Resources/Img/smart-codec-icon.png" >
+    <Grid>
+        <Menu Height="20" VerticalAlignment="Top" Background="LightGray">
+            <MenuItem x:Name="GoBack" Header="◄" Click="MenuItem_Click" />
+            <MenuItem x:Name="New" Header="Nouveau" >
+                <MenuItem Header="Fichier" Click="MenuItemFile_Click" />
+                <MenuItem Header="Modèle" Click="MenuItemModel_Click"/>
+            </MenuItem>
+            <MenuItem Header="Aide" />
+            <MenuItem Header="?" />
+        </Menu>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="83" VerticalAlignment="Top" Width="113" Source="/SmartGenerator;component/Resources/Img/smart-codec-icon.png" Margin="10,40,0,0" />
+        <Label x:Name="label" Content="--[ Smart Generator ]--" HorizontalAlignment="Left" Margin="251,40,0,0" VerticalAlignment="Top" Width="374" Height="60" FontSize="32"/>
+        <ListBox Name="ModelsListBox" HorizontalAlignment="Left" Height="332" Margin="53,151,0,0" VerticalAlignment="Top" Width="768" MouseDoubleClick="Edit_Or_Remove" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ModelID}" TextAlignment="Center" />
+                        <Separator />
+                        <Separator />
+                        <Separator />
+                        <TextBlock Text="      "   />
+                        <TextBlock Text="Model's Name: " TextAlignment="Left" Foreground="#FF9D9C9C" />
+                        <TextBlock Text="{Binding Name}" TextAlignment="Center" />
+                        <Separator />
+                        <Separator />
+                        <Separator />
+                        <TextBlock Text="  "  />
+                        <Separator />
+                        <Separator />
+                        <Separator />
+                        <TextBlock Text="Number of fields: " TextAlignment="Left" Foreground="#FF9D9C9C" />
+                        <TextBlock Text="{Binding ModelImplementations.Count}" TextAlignment="Left" />
+                        
+                        
+                        <!-- <Button Name="View" Content="Visualiser" HorizontalAlignment="Right" /> -->
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <Button Content="Ajouter Nouveau Modèle" HorizontalAlignment="Left" Margin="675,116,0,0" VerticalAlignment="Top" Width="146" Click="Button_Click"/>
+
+    </Grid>
+</Window>

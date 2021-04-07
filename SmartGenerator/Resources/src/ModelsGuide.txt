@@ -1,0 +1,5 @@
+
+0;attestation;D:\Disque dur\Disque Dur\App C#\SmartGenerator\SmartGenerator\Resources\src\Generated\attestation.rtf;nom,prenom,cin,poste,D_ambauche
+1;TestDeMoto;D:\Disque dur\Disque Dur\App C#\SmartGenerator\SmartGenerator\Resources\src\Generated\TestDeMoto.rtf;Moto,prénom,Nom,Ecole,Niveau
+2;AZERTYU;D:\Disque dur\Disque Dur\App C#\SmartGenerator\SmartGenerator\bin\Release\Resources\src\Generated\AZERTYU.rtf;Mourad,Age,Continuation
+3;AZERTY;D:\Disque dur\Disque Dur\App C#\SmartGenerator\SmartGenerator\bin\Release\Resources\src\Generated\AZERTY.rtf;Nom,Bien

@@ -1,0 +1,49 @@
+﻿<Window x:Class="SmartGenerator.Windows.CheckFinal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        Title="Smart Generator - New File" WindowStartupLocation="CenterScreen" Height="560" Width="880"
+        Icon="..\Resources\Img\smart-codec-icon.png" >
+    <Grid>
+        <Label x:Name="label1" Content="--[ Smart Generator ]--" HorizontalAlignment="Left" Margin="263,38,0,0" VerticalAlignment="Top" Width="374" Height="60" FontSize="32"/>
+        <Label x:Name="label" Content="Voici à quoi ressemblera votre fichier" HorizontalAlignment="Left" Margin="276,103,0,0" VerticalAlignment="Top" Width="330" Height="40" FontSize="18"/>
+        <DockPanel Margin="0,167,-0.4,70.4">
+            <ToolBar DockPanel.Dock="Top">
+
+
+                <Separator />
+
+                <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold">
+                    <Image Source="..\Resources\Img\Bold-icon.png" Width="16" Height="16" />
+                </ToggleButton>
+                
+                <ToggleButton Command="EditingCommands.ToggleItalic" Name="btnItalic">
+                    <Image Source="..\Resources\Img\Italic-icon.png" Width="16" Height="16" />
+                </ToggleButton>
+                
+                <ToggleButton Command="EditingCommands.ToggleUnderline" Name="btnUnderline">
+                    <Image  Source="..\Resources\Img\underline-icon.png" Width="16" Height="16" />
+                </ToggleButton>
+                <Separator />
+                <Separator />
+                
+
+                <ComboBox Name="cmbFontFamily" Width="150" Margin="0,0,0,0" SelectionChanged="cmbFontFamily_SelectionChanged" />
+                <ComboBox Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="cmbFontSize_TextChanged" Margin="0,0,0,0.4" />
+            </ToolBar>
+
+            <RichTextBox Name="rtbEditor" Margin="0,-0.2,0,9.8" >
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="Margin" Value="0" />
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+
+        </DockPanel>
+        <Button Content="Générer" HorizontalAlignment="Left" Margin="733,480,0,0" VerticalAlignment="Top" Width="90" Height="25" Click="Button_Click" FontSize="16"/>
+    </Grid>
+</Window>

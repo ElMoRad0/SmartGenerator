@@ -1,0 +1,26 @@
+﻿<Window x:Class="SmartGenerator.Windows.AddField"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        
+        Title="Ajouter un champs" WindowStartupLocation="CenterScreen" Height="165" Width="430.519">
+    <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Nom de votre champs:"/><Run Text="  "/><Run Text=" "/><Run Text="#"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="Vos champs existants:" VerticalAlignment="Top"/>
+            <TextBox Name="FieldName" HorizontalAlignment="Left" Height="19" Margin="150,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" TextChanged="TextBox_TextChanged" FontSize="11" AutomationProperties.HelpText="Field Name" Background="White"/>
+            <ListBox Name="FieldsListBox" HorizontalAlignment="Left" Height="89" Margin="130,34,0,0" VerticalAlignment="Top" Width="284" MouseDoubleClick="SelectField">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Insérer" HorizontalAlignment="Left" Margin="371,10,0,0" VerticalAlignment="Top" Width="43" Click="Button_Click"/>
+
+        </Grid>
+</Window>

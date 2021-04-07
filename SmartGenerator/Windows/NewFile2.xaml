@@ -1,0 +1,34 @@
+﻿<Window x:Class="SmartGenerator.NewFile2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        Closing="NewFile2_Closing"
+        Title="Smart Generator - New File" WindowStartupLocation="CenterScreen" Height="560" Width="880"
+        Icon="..\Resources\Img\smart-codec-icon.png" >
+    <Grid HorizontalAlignment="Left" Width="872">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label1" Content="--[ Smart Generator ]--" HorizontalAlignment="Left" Margin="286,25,0,0" VerticalAlignment="Top" Width="374" Height="60" FontSize="32"/>
+        <Menu Height="20" VerticalAlignment="Top" Background="LightGray">
+            <MenuItem x:Name="GoBack" Header="◄" Click="MenuItem_Click" />
+            <MenuItem x:Name="New" Header="Nouveau" >
+                <MenuItem Header="Fichier" Click="MenuItemFile_Click" />
+                <MenuItem Header="Modèle" Click="MenuItemModel_Click"/>
+            </MenuItem>
+            <MenuItem Header="Aide" />
+            <MenuItem Header="?" />
+        </Menu>
+        <Label x:Name="label" Content="Veuillez remplir les champs nécessaires: " HorizontalAlignment="Left" Margin="294,103,0,0" VerticalAlignment="Top" Width="330" Height="40" FontSize="18"/>
+        <Button x:Name="Finish" Content="Terminé" HorizontalAlignment="Left" Margin="705,477,0,0" VerticalAlignment="Top" Width="109" Height="35" Click="button_Click" FontSize="20" />
+        <Button x:Name="ViewResult" Content="Visualiser" HorizontalAlignment="Left" Margin="575,478,0,0" VerticalAlignment="Top" Width="109" Height="35" Click="ViewResult_Click" FontSize="20" />
+        <StackPanel x:Name="BasePanel" HorizontalAlignment="Left" Height="270" Margin="10, 192, 0, 0" VerticalAlignment="Top" Width="852"/>
+        <Button x:Name="Next" IsEnabled="False" Content="►" HorizontalAlignment="Left" Margin="490,477,0,0" VerticalAlignment="Top" Width="36" Height="36" Opacity="0" Click="Next_Click"/>
+        <Button x:Name="Previous" IsEnabled="False" Content="◄" HorizontalAlignment="Left" Margin="120,477,0,0" VerticalAlignment="Top" Width="36" Height="36" Opacity="0" Click="Previous_Click"/>
+
+    </Grid>
+
+</Window>

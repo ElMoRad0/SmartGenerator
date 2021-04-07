@@ -1,0 +1,33 @@
+﻿<Window x:Class="SmartGenerator.NewModel3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGenerator.Windows"
+        mc:Ignorable="d"
+        Title="Smart Generator" WindowStartupLocation="CenterScreen" Height="560" Width="880"
+        Icon="..\Resources\Img\smart-codec-icon.png" >
+    <Grid>
+        <Label x:Name="label" Content="--[ Smart Generator ]--" HorizontalAlignment="Left" Margin="276,21,0,0" VerticalAlignment="Top" Width="374" Height="60" FontSize="32"/>
+        <Label x:Name="label2" Content="Donnez des noms à vos champs, et surtout, respectez l'ordre" HorizontalAlignment="Left" Margin="175,81,0,0" VerticalAlignment="Top" Width="510" Height="40" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="133,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="92" RenderTransformOrigin="0.523,0.527" Text="Nom du Champ"/>
+        <Label x:Name="ChampsNum" Content="" HorizontalAlignment="Left" Margin="227,154,0,0" VerticalAlignment="Top" Width="43"/>
+        <TextBlock HorizontalAlignment="Left" Margin="276,161,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="319,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+        <TextBlock HorizontalAlignment="Left" Margin="88,211,0,0" TextWrapping="Wrap" Text="Vos Champs dans l'ordre:" VerticalAlignment="Top" Height="20" Width="145"/>
+        <Button x:Name="Ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="625,151,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Button_Click"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="245" Margin="238,211,0,0" VerticalAlignment="Top" Width="490" ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock x:Name="ErrTextBlock" Foreground="Red" HorizontalAlignment="Left" Margin="255,476,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="Finish" IsEnabled="false" Content="Terminer le modèle" HorizontalAlignment="Left" Margin="579,477,0,0" VerticalAlignment="Top" Width="149" Click="Finish_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="846,504,0,0" TextWrapping="Wrap" Text="3/3" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
